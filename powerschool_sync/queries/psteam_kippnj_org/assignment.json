@@ -8,34 +8,34 @@
     {"table_name": "gradesectionconfig"},
     {
         "table_name": "districtteachercategory",
-        "projection": "districtteachercategoryid,name,description,color,isinfinalgrades,isactive,isusermodifiable,displayposition,defaultscoreentrypoints,defaultextracreditpoints,defaultweight,defaulttotalvalue,defaultpublishstate,defaultpublishoption,isdefaultpublishscores,defaultscoretype,defaultdaysbeforedue,ip_address,whomodifiedid,whomodifiedtype,transaction_date,"
+        "projection": "districtteachercategoryid,name,defaultscoretype,isinfinalgrades,"
     },
     {
         "table_name": "teachercategory",
-        "projection": "teachercategoryid,districtteachercategoryid,name,usersdcid,description,categorytype,color,isinfinalgrades,isactive,isusermodifiable,teachermodified,displayposition,defaultscoreentrypoints,defaultextracreditpoints,defaultweight,defaulttotalvalue,defaultpublishstate,defaultpublishoption,isdefaultpublishscores,defaultscoretype,defaultdaysbeforedue,ip_address,whomodifiedid,whomodifiedtype,transaction_date,"
+        "projection": "teachercategoryid,name,defaultscoretype,isinfinalgrades,districtteachercategoryid,"
     },
     {
         "table_name": "assignmentcategoryassoc",
-        "projection": "assignmentcategoryassocid,assignmentsectionid,teachercategoryid,yearid,isprimary,ip_address,whomodifiedid,whomodifiedtype,transaction_date,",
+        "projection": "assignmentcategoryassocid,assignmentsectionid,teachercategoryid,",
         "queries": {
             "selector": "assignmentcategoryassocid",
-            "values": [391542]
+            "values": [461551]
         }
     },
     {
         "table_name": "assignmentsection",
-        "projection": "assignmentsectionid,yearid,sectionsdcid,assignmentid,relatedgradescaleitemdcid,name,duedate,description,scoretype,scoreentrypoints,extracreditpoints,weight,totalpointvalue,iscountedinfinalgrade,isscoringneeded,publishoption,publishdaysbeforedue,publishonspecificdate,publisheddate,publishedscoretypeid,isscorespublish,maxretakeallowed,ip_address,whomodifiedid,whomodifiedtype,transaction_date,",
+        "projection": "assignmentsectionid,name,assignmentid,duedate,extracreditpoints,iscountedinfinalgrade,sectionsdcid,totalpointvalue,weight,",
         "queries": {
             "selector": "duedate",
-            "values": ["2022-01-18"]
+            "values": ["2022-06-30"]
         }
     },
     {
         "table_name": "assignmentscore",
-        "projection": "assignmentscoreid,yearid,assignmentsectionid,studentsdcid,islate,iscollected,isexempt,ismissing,isabsent,isincomplete,actualscoreentered,actualscorekind,actualscoregradescaledcid,scorepercent,scorepoints,scorelettergrade,scorenumericgrade,scoreentrydate,scoregradescaledcid,altnumericgrade,altalphagrade,altscoregradescaledcid,hasretake,authoredbyuc,ip_address,whomodifiedid,whomodifiedtype,transaction_date,",
+        "projection": "assignmentscoreid,assignmentsectionid,isexempt,islate,ismissing,scoreentrydate,scorepoints,studentsdcid",
         "queries": {
             "selector": "scoreentrydate",
-            "values": ["2022-01-18"]
+            "values": ["2022-06-30"]
         }
     }
 ]
