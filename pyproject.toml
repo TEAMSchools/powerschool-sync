@@ -5,9 +5,14 @@ description = ""
 authors = [
   { name = "Charlie Bini", email = "5003326+cbini@users.noreply.github.com" },
 ]
-dependencies = ["google-cloud-storage>=2.1.0", "powerschool>=3.1.1"]
+dependencies = [
+    "google-cloud-storage>=2.1.0",
+    "powerschool>=3.1.1",
+    "datarobot @ file:///${PROJECT_ROOT}/../datarobot",
+]
 requires-python = ">=3.9"
 license = { text = "MIT" }
+dynamic = ["dependencies"]
 
 [project.urls]
 homepage = ""
@@ -23,7 +28,6 @@ requires = ["pdm-pep517"]
 build-backend = "pdm.pep517.api"
 
 [tool.pdm.scripts]
-_.site_packages = true
 extract-nwk = { call = "powerschool_sync.extract:main", env_file = "env/psteam_kippnj_org.env" }
 extract-cmd = { call = "powerschool_sync.extract:main", env_file = "env/pskcna_kippnj_org.env" }
 extract-mia = { call = "powerschool_sync.extract:main", env_file = "env/ps_kippmiami_org.env" }
